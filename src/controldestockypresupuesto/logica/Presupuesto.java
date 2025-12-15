@@ -1,90 +1,47 @@
-
 package controldestockypresupuesto.logica;
+
 import java.util.Date;
 
 public class Presupuesto {
-    private int id_presupuesto;
-    private int id_cliente;
+    private int id;
+    private int idCliente;
     private Date fecha;
-    private double monto_unidad;
-    private double monto_total;
+    private double montoUnidad;
+    private double montoTotal;
     private EstadoPresupuesto estado;
     private String observaciones;
-    
-    public Presupuesto(){
-        
-    }
 
-    public Presupuesto(int id_presupuesto, int id_cliente, Date fecha, double monto_unidad, double monto_total,EstadoPresupuesto estado,String observaciones) {
-        this.id_presupuesto = id_presupuesto;
-        this.id_cliente = id_cliente;
+    public Presupuesto() {}
+
+    public Presupuesto(int id, int idCliente, Date fecha, double montoUnidad, double montoTotal,
+                       EstadoPresupuesto estado, String observaciones) {
+        this.id = id;
+        this.idCliente = idCliente;
         this.fecha = fecha;
-        this.monto_unidad = monto_unidad;
-        this.monto_total = monto_total;
+        this.montoUnidad = montoUnidad;
+        this.montoTotal = montoTotal;
         this.estado = estado;
         this.observaciones = observaciones;
     }
 
-    public int getId_presupuesto() {
-        return id_presupuesto;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId_presupuesto(int id_presupuesto) {
-        this.id_presupuesto = id_presupuesto;
-    }
+    public int getIdCliente() { return idCliente; }
+    public void setIdCliente(int idCliente) { this.idCliente = idCliente; }
 
-    public int getId_cliente() {
-        return id_cliente;
-    }
+    public Date getFecha() { return fecha; }
+    public void setFecha(Date fecha) { this.fecha = fecha; }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
-    }
+    public double getMontoUnidad() { return montoUnidad; }
+    public void setMontoUnidad(double montoUnidad) { this.montoUnidad = montoUnidad; }
 
-    public Date getFecha() {
-        return fecha;
-    }
+    public double getMontoTotal() { return montoTotal; }
+    public void setMontoTotal(double montoTotal) { this.montoTotal = montoTotal; }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
+    public EstadoPresupuesto getEstado() { return estado; }
+    public void setEstado(EstadoPresupuesto estado) { this.estado = estado; }
 
-    public double getMonto_unidad() {
-        return monto_unidad;
-    }
-
-    public void setMonto_unidad(double monto_unidad) {
-        this.monto_unidad = monto_unidad;
-    }
-
-    public double getMonto_total() {
-        return monto_total;
-    }
-
-    public void setMonto_total(double monto_total) {
-        this.monto_total = monto_total;
-    }
-
-    public EstadoPresupuesto getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoPresupuesto estado) {
-        this.estado = estado;
-    }
-
-    public String getObservaciones() {
-        return observaciones;
-    }
-
-    public void setObservaciones(String observaciones) {
-        this.observaciones = observaciones;
-    }
-    
-    
-    
-    
-    
-    
-
+    public String getObservaciones() { return observaciones; }
+    public void setObservaciones(String observaciones) { this.observaciones = observaciones; }
 }

@@ -1,10 +1,11 @@
-
 package controldestockypresupuesto.logica;
+
 import java.util.Date;
 
 public class Pedido {
+
     private int id;
-    private String cliente;
+    private int idCliente;
     private String descripcion;
     private double total;
     private EstadoPedido estado;
@@ -12,27 +13,16 @@ public class Pedido {
     private Date fechaEntregaReal;
     private Date fechaEntregaEstimada;
     private double anticipo;
-    private PrioridadPedido prioridadPedido;
-    
-    
-    public Pedido(){
-        
-    }
-    
-    public Pedido (int id,String cliente){
-        this.id = id;
-        this.cliente = cliente;
-              
+    private PrioridadPedido prioridad;
+    private MetodoPago metodoPago;
+
+    public Pedido() {
     }
 
-    public Pedido(int id, String cliente, String descripcion, double total, EstadoPedido estado) {
+    public Pedido(int id, int idCliente) {
         this.id = id;
-        this.cliente = cliente;
-        this.descripcion = descripcion;
-        this.total = total;
-        this.estado = estado;
+        this.idCliente = idCliente;
     }
-    
 
     public int getId() {
         return id;
@@ -42,12 +32,12 @@ public class Pedido {
         this.id = id;
     }
 
-    public String getCliente() {
-        return cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getDescripcion() {
@@ -66,13 +56,59 @@ public class Pedido {
         this.total = total;
     }
 
-    public EstadoPedido getestado() {
+    public EstadoPedido getEstado() {
         return estado;
     }
 
-    public void setEstadoId(EstadoPedido estado) {
+    public void setEstado(EstadoPedido estado) {
         this.estado = estado;
     }
-    
 
+    public Date getFechaPedido() {
+        return fechaPedido;
+    }
+
+    public void setFechaPedido(Date fechaPedido) {
+        this.fechaPedido = fechaPedido;
+    }
+
+    public Date getFechaEntregaReal() {
+        return fechaEntregaReal;
+    }
+
+    public void setFechaEntregaReal(Date fechaEntregaReal) {
+        this.fechaEntregaReal = fechaEntregaReal;
+    }
+
+    public Date getFechaEntregaEstimada() {
+        return fechaEntregaEstimada;
+    }
+
+    public void setFechaEntregaEstimada(Date fechaEntregaEstimada) {
+        this.fechaEntregaEstimada = fechaEntregaEstimada;
+    }
+
+    public double getAnticipo() {
+        return anticipo;
+    }
+
+    public void setAnticipo(double anticipo) {
+        this.anticipo = anticipo;
+    }
+
+    public PrioridadPedido getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(PrioridadPedido prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    public MetodoPago getMetodoPago() {
+        return metodoPago;
+    }
+
+    public void setMetodoPago(MetodoPago metodoPago) {
+        this.metodoPago = metodoPago;
+    }
 }
